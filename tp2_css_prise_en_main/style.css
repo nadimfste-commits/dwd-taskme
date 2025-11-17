@@ -1,0 +1,277 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #2b8aed;
+  --secondary-color: #f0f4ff;
+  --accent-color: #ffb400;
+  --success-color: #27ae60;
+  --danger-color: #e74c3c;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --border-color: #dddddd;
+
+  --font-main: 'Segoe UI', Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-title: 1.8rem;
+
+  --radius: 8px;
+  --spacing: 1rem;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================= */
+/* Header                                        */
+/* ============================================= */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--spacing);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+header h1 {
+  font-size: var(--font-size-title);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================= */
+/* Main content                                  */
+/* ============================================= */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing);
+  padding: var(--spacing);
+}
+
+/* Sections */
+section {
+  background-color: var(--secondary-color);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  flex: 2;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Aside (formulaire création tâche) */
+aside {
+  background-color: var(--secondary-color);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Formulaires */
+form label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e69900;
+}
+
+button.success {
+  background-color: var(--success-color);
+}
+
+button.danger {
+  background-color: var(--danger-color);
+}
+
+/* ============================================= */
+/* Tableaux (liste des tâches)                   */
+/* ============================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing);
+}
+
+thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
+/* ============================================= */
+/* Listes                                        */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Figures */
+figure {
+  margin: var(--spacing) 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  color: var(--text-color);
+}
+
+/* ============================================= */
+/* Footer                                        */
+/* ============================================= */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: var(--spacing);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================= */
+/* Responsive                                    */
+/* ============================================= */
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside, section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  figure img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.back-to-top {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.back-to-top a {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-to-top a:hover {
+  background-color: #1f6ec2; /* nuance légèrement plus foncée */
+  transform: translateY(-2px);
+}
+
