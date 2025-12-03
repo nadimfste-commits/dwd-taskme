@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bienvenue sur Taskme — application web de gestion et d’affectation de tâches.">
+  <title>Taskme – Accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico">
+  <script src="js/sidebar.js"></script>
+  <script src="js/themeMode.js"></script>
+</head>
+<body>
+  <header>
+    <button id="open-sidebar" class="sidebar-toggle">☰</button>
+    <h1>Taskme</h1>
+    <p>Gérez et affectez des tâches facilement.</p>
+    <button id="theme-toggle" class="theme-btn">🌙 Mode Sombre</button>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="profile.html">Profil</a></li>
+        <li><a href="tasks.html">Tâches</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <aside id="sidebar" class="sidebar">
+  <h2>Taskme</h2>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="profile.html">Profil</a></li>
+    <li><a href="tasks.html">Tâches</a></li>
+  </ul>
+ </aside>
+
+  <main class="main-content">
+    <section aria-labelledby="presentation">
+      <h2 id="presentation">Présentation de Taskme</h2>
+      <p>Taskme est une application web conçue pour améliorer la collaboration en entreprise en gérant l’affectation des tâches.</p>
+      <ul>
+        <li>Accepter une tâche</li>
+        <li>Refuser une tâche</li>
+        <li>Déléguer une tâche</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="features">
+      <h2 id="features">Fonctionnalités principales</h2>
+      <article>
+        <ol>
+          <li>Chat interne</li>
+          <li>Parc véhicules</li>
+          <li>Tableau de bord</li>
+        </ol>
+      </article>
+
+      <figure>
+        <img src="images/taskme.png" alt="Illustration de Taskme" width="600">
+        <figcaption>Exemple d’interface Taskme</figcaption>
+      </figure>
+    </section>
+  </main>
+  <div class="back-to-top">
+    <p><a href="#top">Revenir en haut ↑</a></p>
+  </div>
+  <footer>
+    <p>Tous droits réservés © 2025 - Taskme</p>
+    <p><a href="https://example.com/mentions" target="_blank" rel="noopener noreferrer">Mentions légales</a> — <a href="https://example.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité</a> — <a href="https://example.com/terms" target="_blank" rel="noopener noreferrer">Conditions d’utilisation</a></p>
+  </footer>
+</body>
+</html>
