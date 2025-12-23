@@ -1,0 +1,20 @@
+.back-to-top {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.back-to-top a {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-to-top a:hover {
+  background-color: #1f6ec2; 
+  transform: translateY(-2px);
+}

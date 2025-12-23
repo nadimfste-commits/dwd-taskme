@@ -1,0 +1,284 @@
+/* ============================================= */ 
+/* Reset & Variables                             */ 
+/* ============================================= */ 
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+} 
+ 
+:root { 
+  --primary-color: #2b8aed; 
+  --secondary-color: #f0f4ff; 
+  --accent-color: #ffb400; 
+  --success-color: #27ae60; 
+  --danger-color: #e74c3c; 
+  --text-color: #333; 
+  --bg-color: #ffffff; 
+  --border-color: #dddddd; 
+ 
+  --font-main: 'Segoe UI', Arial, sans-serif; 
+  --font-size-base: 16px; 
+  --font-size-title: 1.8rem; 
+ 
+  --radius: 8px; 
+  --spacing: 1rem; 
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+} 
+ 
+body { 
+  background-color: var(--bg-color); 
+  color: var(--text-color); 
+  font-family: var(--font-main); 
+  font-size: var(--font-size-base); 
+  line-height: 1.6; 
+  min-height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+} 
+ 
+/* ============================================= */ 
+/* Main content                                  */ 
+/* ============================================= */ 
+main { 
+  flex: 1; 
+  display: flex; 
+  flex-direction: row; 
+  gap: var(--spacing); 
+  padding: var(--spacing); 
+} 
+ 
+/* Sections */ 
+section { 
+  background-color: var(--secondary-color); 
+  padding: var(--spacing); 
+  border-radius: var(--radius); 
+  box-shadow: var(--shadow); 
+  border: 1px solid var(--border-color); 
+  flex: 2; 
+} 
+ 
+h2 { 
+  margin-bottom: 0.5rem; 
+  color: var(--primary-color); 
+} 
+ 
+/* Aside (formulaire création tâche) */ 
+aside { 
+  background-color: var(--secondary-color); 
+  padding: var(--spacing); 
+  border-radius: var(--radius); 
+  box-shadow: var(--shadow); 
+  border: 1px solid var(--border-color); 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.5rem; 
+} 
+ 
+/* ============================================= */ 
+/* Formulaires                                   */ 
+/* ============================================= */ 
+form label { 
+  display: block; 
+  margin-top: 0.5rem; 
+  font-weight: 500; 
+} 
+ 
+input, textarea, select { 
+  width: 100%; 
+  padding: 0.5rem; 
+  border: 1px solid var(--border-color); 
+  border-radius: var(--radius); 
+} 
+ 
+input:focus, textarea:focus, select:focus { 
+  outline: none; 
+  border-color: var(--primary-color); 
+} 
+ 
+button { 
+  background-color: var(--accent-color); 
+  color: white; 
+  border: none; 
+  border-radius: var(--radius); 
+  padding: 0.6rem 1rem; 
+  margin-top: 0.5rem; 
+  cursor: pointer; 
+  transition: 0.3s; 
+} 
+ 
+button:hover { 
+  background-color: #e69900; 
+} 
+ 
+button.success { 
+  background-color: var(--success-color); 
+} 
+ 
+button.danger { 
+  background-color: var(--danger-color); 
+} 
+ 
+/* ============================================= */ 
+/* Tableaux (liste des tâches)                   */ 
+/* ============================================= */ 
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-top: var(--spacing); 
+} 
+ 
+thead { 
+  background-color: var(--primary-color); 
+  color: white; 
+} 
+ 
+th, td { 
+  padding: 0.5rem; 
+  border: 1px solid var(--border-color); 
+  text-align: left; 
+} 
+ 
+tr:nth-child(even) { 
+  background-color: var(--secondary-color); 
+} 
+ 
+/* ============================================= */ 
+/* Listes                                        */ 
+/* ============================================= */ 
+ul, ol { 
+  margin-left: 1.5rem; 
+  margin-top: 0.5rem; 
+  margin-bottom: 0.5rem; 
+} 
+ 
+/* Figures */ 
+figure { 
+  margin: var(--spacing) 0; 
+  text-align: center; 
+} 
+ 
+figcaption { 
+  font-size: 0.9rem; 
+  margin-top: 0.25rem; 
+  color: var(--text-color); 
+} 
+ 
+/* ============================================= */ 
+/* Mode Sombre                                   */ 
+/* ============================================= */ 
+body.dark-mode { 
+  background-color: #1a1a1a; 
+  color: #e0e0e0; 
+} 
+ 
+body.dark-mode section, 
+body.dark-mode aside { 
+  background-color: #2a2a2a; 
+  color: #e0e0e0; 
+  border: 1px solid #444; 
+} 
+ 
+body.dark-mode input, 
+body.dark-mode textarea, 
+body.dark-mode select { 
+  background-color: #333; 
+  color: #e0e0e0; 
+  border-color: #555; 
+} 
+ 
+body.dark-mode table tr:nth-child(even) { 
+  background-color: #333; 
+} 
+ 
+body.dark-mode th,  
+body.dark-mode td { 
+  border-color: #555; 
+} 
+ 
+/* ============================================= */ 
+/* Responsive                                    */ 
+/* ============================================= */ 
+@media (max-width: 1024px) { 
+  main { 
+    flex-direction: column; 
+  } 
+ 
+  aside, section { 
+    width: 100%; 
+  } 
+} 
+ 
+@media (max-width: 768px) { 
+  button { 
+    width: 100%; 
+  } 
+ 
+  figure img { 
+    width: 100%; 
+    height: auto; 
+  } 
+} 
+
+/* Système de notifications */
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+}
+
+.notification {
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: slideIn 0.3s ease-out;
+  color: white;
+  font-weight: 500;
+}
+
+.notification.success {
+  background-color: var(--success-color);
+}
+
+.notification.info {
+  background-color: var(--primary-color);
+}
+
+.notification.danger {
+  background-color: var(--danger-color);
+}
+
+.notification.warning {
+  background-color: var(--accent-color);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+}

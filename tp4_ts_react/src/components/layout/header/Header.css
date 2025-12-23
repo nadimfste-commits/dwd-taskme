@@ -1,0 +1,90 @@
+header { 
+  background-color: var(--primary-color); 
+  color: white; 
+  padding: var(--spacing); 
+  box-shadow: var(--shadow); 
+  text-align: center; 
+} 
+ 
+header h1 { 
+  font-size: var(--font-size-title); 
+  margin-bottom: 0.5rem; 
+} 
+ 
+header p { 
+  font-weight: 500; 
+} 
+ 
+nav ul { 
+  list-style: none; 
+  display: flex; 
+  justify-content: center; 
+  gap: 1rem; 
+  margin-top: 0.5rem; 
+} 
+ 
+nav a { 
+  color: white; 
+  text-decoration: none; 
+  font-weight: 500; 
+} 
+ 
+nav a[aria-current="page"] { 
+  font-weight: bold; 
+  text-decoration: underline; 
+  color: var(--accent-color); 
+} 
+ 
+nav a:hover { 
+  text-decoration: underline; 
+} 
+ 
+/* Bouton menu dans le header */ 
+.menu-btn { 
+  background: none; 
+  border: none; 
+  font-size: 1.8rem; 
+  cursor: pointer; 
+  margin-right: 1rem; 
+  color: var(--text-color, #333); 
+  transition: transform 0.2s; 
+} 
+ 
+.menu-btn:hover { 
+  transform: scale(1.1); 
+} 
+ 
+/* Mode Sombre/clair */ 
+.theme-btn { 
+  position: absolute; 
+  top: 1rem; 
+  right: 1rem; 
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #ffffff; 
+  border: 1px solid white; 
+  padding: 0.5rem; 
+  cursor: pointer; 
+  font-size: 0.9rem; 
+  width: auto;  
+} 
+ 
+.theme-btn:hover { 
+  background-color: rgba(255, 255, 255, 0.3); 
+} 
+ 
+/* Dark mode pour le header */ 
+body.dark-mode header { 
+  background-color: #0d47a1; 
+} 
+ 
+/* Responsive */ 
+@media (max-width: 768px) { 
+  nav ul { 
+    flex-direction: column; 
+    gap: 0.25rem; 
+  } 
+ 
+  .menu-btn { 
+    font-size: 1.6rem; 
+  } 
+}
