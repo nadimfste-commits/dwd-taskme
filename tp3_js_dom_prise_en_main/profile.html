@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil utilisateur — Taskme.">
+  <title>Taskme – Profil</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico">
+  <script src="js/sidebar.js"></script>
+  <script src="js/themeMode.js"></script>
+</head>
+<body>
+  <header>
+    <button id="open-sidebar" class="sidebar-toggle">☰</button>
+    <h1>Taskme</h1>
+    <p>Profil utilisateur</p>
+    <button id="theme-toggle" class="theme-btn">🌙 Mode Sombre</button>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="profile.html" aria-current="page">Profil</a></li>
+        <li><a href="tasks.html">Tâches</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+  <h2>Taskme</h2>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="profile.html">Profil</a></li>
+    <li><a href="tasks.html">Tâches</a></li>
+  </ul>
+ </aside>
+
+
+  <aside id="sidebar" class="sidebar">
+    <h2>Taskme</h2>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="profile.html">Profil</a></li>
+      <li><a href="tasks.html">Tâches</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <section aria-labelledby="profile-section">
+      <h2 id="profile-section">Profile</h2>
+
+      <figure>
+        <img src="images/photo_profile.png" alt="Photo de profil" width="180">
+        <figcaption>Photo de profil</figcaption>
+      </figure>
+
+      <div class="user-info">
+        <p><strong>Nom :</strong> <span data-user-name="Ali Rafiki">Ali Rafiki</span></p>
+        <p><strong>Rôle :</strong> <span data-user-role="administrateur">Administrateur</span></p>
+        <p><strong>Email :</strong> <span data-user-email="ali.rafiki@example.com">Ali.Rafiki@example.com</span></p>
+        <p><strong>Téléphone :</strong> <span data-user-phone="+212 6 12 34 56 78">+212 6 12 34 56 78</span></p>
+        <p><strong>Statut :</strong> <span data-user-status="actif">Actif</span></p>
+      </div>
+
+      <details>
+        <summary>Compétences</summary>
+        <ul>
+          <li>Gestion de projet</li>
+          <li>Coordination d'équipe</li>
+          <li>Maintenance</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+  <div class="back-to-top">
+    <p><a href="#top">Revenir en haut ↑</a></p>
+  </div>
+  <footer>
+    <p>Tous droits réservés © 2025 - Taskme</p>
+    <p><a href="https://example.com/mentions" target="_blank" rel="noopener noreferrer">Mentions légales</a></p>
+  </footer>
+</body>
+</html>
